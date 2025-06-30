@@ -370,16 +370,16 @@
     <div class="controls">
       <select id="volatility-select">
         <option value="">Select Volatility Index To Analyze</option>
-        <option value="1HZ10V">Vol 10 (1s) Idenx</option>
-        <option value="1HZ25V">Vol 25 (1s) Idenx</option>
-        <option value="1HZ50V">Vol 50 (1s) Idenx</option>
-        <option value="1HZ75V">Vol 75 (1s) Idenx</option>
+        <option value="1HZ10V">Vol 10 (1s) Index</option>
+        <option value="1HZ25V">Vol 25 (1s) Index</option>
+        <option value="1HZ50V">Vol 50 (1s) Index</option>
+        <option value="1HZ75V">Vol 75 (1s) Index</option>
         <option value="1HZ100V">Vol 100 (1s) Idenx</option>
-        <option value="R_10">Vol 10 Idenx</option>
-        <option value="R_25">Vol 25 Idenx</option>
-        <option value="R_50">Vol 50 Idenx</option>
-        <option value="R_75">Vol 75 Idenx</option>
-        <option value="R_100">Vol 100 Idenx</option>
+        <option value="R_10">Vol 10 Index</option>
+        <option value="R_25">Vol 25 Index</option>
+        <option value="R_50">Vol 50 Index</option>
+        <option value="R_75">Vol 75 Index</option>
+        <option value="R_100">Vol 100 Index</option>
       </select>
       <button id="start-button">Start Analysis</button>
     </div>
@@ -395,16 +395,16 @@
   <script>
     (() => {
       const volatilities = [
-        { symbol: '1HZ10V', name: 'Vol 10 (1s) Idenx', barrierHigher: -0.48, barrierLower: 0.48 },
-        { symbol: '1HZ25V', name: 'Vol 25 (1s) Idenx', barrierHigher: -80, barrierLower: 80 },
-        { symbol: '1HZ50V', name: 'Vol 50 (1s) Idenx', barrierHigher: -61, barrierLower: 61 },
-        { symbol: '1HZ75V', name: 'Vol 75 (1s) Idenx', barrierHigher: -2.6, barrierLower: 2.6 },
-        { symbol: '1HZ100V', name: 'Vol 100 (1s) Idenx', barrierHigher: -0.25, barrierLower: 0.25 },
-        { symbol: 'R_10', name: 'Vol 10 Idenx', barrierHigher: -0.49, barrierLower: 0.49 },
-        { symbol: 'R_25', name: 'Vol 25 Idenx', barrierHigher: -0.5, barrierLower: 0.5 },
-        { symbol: 'R_50', name: 'Vol 50 Idenx', barrierHigher: -0.05, barrierLower: 0.05 },
-        { symbol: 'R_75', name: 'Vol 75 Idenx', barrierHigher: -52, barrierLower: 52 },
-        { symbol: 'R_100', name: 'Vol 100 Idenx', barrierHigher: -0.9, barrierLower: 0.9 }
+        { symbol: '1HZ10V', name: 'Vol 10 (1s) Index', barrierHigher: -0.48, barrierLower: 0.48 },
+        { symbol: '1HZ25V', name: 'Vol 25 (1s) Index', barrierHigher: -80, barrierLower: 80 },
+        { symbol: '1HZ50V', name: 'Vol 50 (1s) Index', barrierHigher: -61, barrierLower: 61 },
+        { symbol: '1HZ75V', name: 'Vol 75 (1s) Index', barrierHigher: -2.6, barrierLower: 2.6 },
+        { symbol: '1HZ100V', name: 'Vol 100 (1s) Index', barrierHigher: -0.25, barrierLower: 0.25 },
+        { symbol: 'R_10', name: 'Vol 10 Index', barrierHigher: -0.49, barrierLower: 0.49 },
+        { symbol: 'R_25', name: 'Vol 25 Index', barrierHigher: -0.5, barrierLower: 0.5 },
+        { symbol: 'R_50', name: 'Vol 50 Index', barrierHigher: -0.05, barrierLower: 0.05 },
+        { symbol: 'R_75', name: 'Vol 75 Index', barrierHigher: -52, barrierLower: 52 },
+        { symbol: 'R_100', name: 'Vol 100 Index', barrierHigher: -0.9, barrierLower: 0.9 }
       ];
 
       const dataStore = {};
