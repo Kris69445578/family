@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>👨‍👩‍👧‍👦HACKSVIBEZ TRADING FAMILIY</title>
+  <title>👨‍👩‍👧‍👦HACKSVIBEZ TRADING FAMILY</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       background: black;
@@ -19,7 +18,6 @@
       height: 100vh;
       overflow: hidden;
     }
-
     #loading-screen {
       position: fixed;
       top: 0;
@@ -33,7 +31,6 @@
       flex-direction: column;
       z-index: 1000;
     }
-
     #loading-spinner {
       border: 4px solid rgba(0, 0, 0, 0.1);
       border-radius: 50%;
@@ -43,19 +40,16 @@
       animation: spin 1.5s linear infinite;
       margin-bottom: 20px;
     }
-
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
     #loading-text {
       color: #00ff9d;
       font-size: 20px;
       margin-bottom: 30px;
       text-align: center;
     }
-
     #progress-container {
       width: 80%;
       max-width: 400px;
@@ -63,7 +57,6 @@
       border-radius: 10px;
       margin-top: 20px;
     }
-
     #progress-bar {
       height: 20px;
       background: linear-gradient(to right, #00ff9d, #00b8ff);
@@ -71,14 +64,12 @@
       width: 0%;
       transition: width 0.3s ease;
     }
-
     #progress-text {
       color: #00ff9d;
       font-size: 16px;
       margin-top: 10px;
       text-align: center;
     }
-
     #app {
       height: calc(100vh - 16px);
       max-width: 100%;
@@ -90,7 +81,6 @@
       overflow: hidden;
       display: none;
     }
-
     header {
       padding: 10px;
       font-size: clamp(14px, 4vw, 18px);
@@ -99,7 +89,6 @@
       background: linear-gradient(90deg, #0057ff, #00c8ff);
       color: white;
     }
-
     .controls {
       padding: 10px;
       display: flex;
@@ -108,7 +97,6 @@
       gap: 10px;
       background: #252525;
     }
-
     .additional-controls {
       padding: 10px;
       display: flex;
@@ -117,7 +105,6 @@
       gap: 10px;
       background: #252525;
     }
-
     select, button {
       padding: 8px 12px;
       border-radius: 6px;
@@ -126,15 +113,12 @@
       color: white;
       font-size: 14px;
     }
-
     button {
       cursor: pointer;
     }
-
     button:hover {
       background: #0044cc;
     }
-
     .main-content {
       display: flex;
       justify-content: center;
@@ -143,7 +127,6 @@
       overflow-y: auto;
       height: 100%;
     }
-
     .vol-card {
       background: rgba(222, 184, 135, 0.06);
       border-radius: 10px;
@@ -151,7 +134,6 @@
       box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
       width: 300px;
     }
-
     .signal-consolidation {
       background: rgba(138, 43, 226, 0.15);
       color: #9932cc;
@@ -160,25 +142,21 @@
       text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
       animation: pulse-consolidation 2s infinite;
     }
-
     @keyframes pulse-building {
       0% { box-shadow: 0 0 5px rgba(255, 165, 0, 0.3); }
       50% { box-shadow: 0 0 15px rgba(255, 165, 0, 0.5); }
       100% { box-shadow: 0 0 5px rgba(255, 165, 0, 0.3); }
     }
-
     @keyframes pulse-weak {
       0% { box-shadow: 0 0 5px rgba(255, 255, 0, 0.3); }
       50% { box-shadow: 0 0 15px rgba(255, 255, 0, 0.5); }
       100% { box-shadow: 0 0 5px rgba(255, 255, 0, 0.3); }
     }
-
     @keyframes pulse-consolidation {
       0% { box-shadow: 0 0 5px rgba(138, 43, 226, 0.3); }
       50% { box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); }
       100% { box-shadow: 0 0 5px rgba(138, 43, 226, 0.3); }
     }
-
     .vol-title {
       font-size: clamp(12px, 3vw, 14px);
       color: #7db8ff;
@@ -187,46 +165,38 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
     .data-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 6px;
       font-size: clamp(10px, 2.5vw, 12px);
     }
-
     .data-item {
       display: flex;
       justify-content: space-between;
     }
-
     .data-label {
       color: #7db8ff;
     }
-
     .indicator-value {
       font-weight: 600;
       color: white;
     }
-
     .barrier-inputs {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
       margin-top: 8px;
     }
-
     .barrier-group {
       display: flex;
       flex-direction: column;
     }
-
     .barrier-label {
       font-size: clamp(10px, 2.5vw, 11px);
       color: #abbcff;
       margin-bottom: 2px;
     }
-
     .barrier-input {
       width: 100%;
       background: #121212;
@@ -237,7 +207,6 @@
       font-size: clamp(10px, 2.5vw, 12px);
       text-align: center;
     }
-
     .signal-area {
       margin-top: 8px;
       padding: 6px;
@@ -250,13 +219,11 @@
       justify-content: center;
       transition: all 0.3s ease;
     }
-
     .signal-waiting {
       background: rgba(180, 180, 180, 0.1);
       color: #aaa;
       border: 1px solid rgba(150, 150, 150, 0.3);
     }
-
     .signal-higher {
       background: rgba(0, 255, 0, 0.15);
       color: #0f0;
@@ -264,7 +231,6 @@
       box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
       text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
     }
-
     .signal-lower {
       background: rgba(255, 0, 0, 0.15);
       color: #f00;
@@ -272,14 +238,12 @@
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
       text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
     }
-
     .countdown {
       font-size: clamp(10px, 2.5vw, 11px);
       color: #00bbff;
       text-align: center;
       margin-top: 4px;
     }
-
     .connection-status {
       position: fixed;
       bottom: 8px;
@@ -291,46 +255,37 @@
       font-size: 11px;
       z-index: 10;
     }
-
     .connected { color: #0f0; }
     .disconnected { color: #f00; }
     .connecting { color: #ff0; }
-
     .indicator-row {
       display: flex;
       justify-content: space-between;
       margin-top: 4px;
     }
-
     .indicator-name {
       color: #7db8ff;
       font-size: 10px;
     }
-
     .indicator-bar {
       height: 4px;
       border-radius: 2px;
       margin-top: 2px;
     }
-
     .positive-bar {
       background: linear-gradient(90deg, rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0.8));
     }
-
     .negative-bar {
       background: linear-gradient(90deg, rgba(255, 0, 0, 0.3), rgba(255, 0, 0, 0.8));
     }
-
     .neutral-bar {
       background: rgba(150, 150, 150, 0.3);
     }
-
     .indicator-strength {
       font-size: 9px;
       color: #aaa;
       text-align: right;
     }
-
     .signal-explanation {
       font-size: 9px;
       color: #ccc;
@@ -338,20 +293,73 @@
       text-align: center;
       padding: 0 4px;
     }
-
     .pattern-indicator {
       font-size: 8px;
       color: #ff9900;
       text-align: center;
       margin-top: 2px;
     }
-
     .candle-pattern {
       font-size: 8px;
       color: #00ffcc;
       text-align: center;
       margin-top: 2px;
       font-weight: bold;
+    }
+    .digits-section {
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .digits-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .digits-title {
+      font-size: 14px;
+      color: #7db8ff;
+      font-weight: bold;
+    }
+    .digits-controls {
+      display: flex;
+      gap: 8px;
+    }
+    .digits-container {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      padding: 8px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #00ff9d;
+      border: 1px solid rgba(0, 87, 255, 0.3);
+    }
+    .digits-section button {
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: none;
+      background: #0057ff;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .digits-section button:hover {
+      background: #0044cc;
+      transform: translateY(-1px);
+    }
+    .digits-section button:active {
+      transform: translateY(0);
+    }
+    .hidden {
+      display: none;
     }
   </style>
 </head>
@@ -364,7 +372,6 @@
     </div>
     <div id="progress-text">0%</div>
   </div>
-
   <div id="app">
     <header>RISE FALL/ HIGHER LOWER ENTRY SCANNER</header>
     <div class="controls">
@@ -374,7 +381,7 @@
         <option value="1HZ25V">Vol 25 (1s) Index</option>
         <option value="1HZ50V">Vol 50 (1s) Index</option>
         <option value="1HZ75V">Vol 75 (1s) Index</option>
-        <option value="1HZ100V">Vol 100 (1s) Idenx</option>
+        <option value="1HZ100V">Vol 100 (1s) Index</option>
         <option value="R_10">Vol 10 Index</option>
         <option value="R_25">Vol 25 Index</option>
         <option value="R_50">Vol 50 Index</option>
@@ -391,7 +398,6 @@
     <div class="main-content" id="cards-container"></div>
     <div id="connection-status" class="connection-status disconnected">Disconnected</div>
   </div>
-
   <script>
     (() => {
       const volatilities = [
@@ -406,7 +412,6 @@
         { symbol: 'R_75', name: 'Vol 75 Index', barrierHigher: -52, barrierLower: 52 },
         { symbol: 'R_100', name: 'Vol 100 Index', barrierHigher: -0.9, barrierLower: 0.9 }
       ];
-
       const dataStore = {};
       let ws = null;
       const MIN_DATA_POINTS = 30;
@@ -414,7 +419,6 @@
       const STRONG_THRESHOLD = 0.7;
       const CONSOLIDATION_PERIOD = 15;
       const CONSOLIDATION_RANGE_PERCENT = 0.5;
-
       class EMA {
         constructor(period) {
           this.period = period;
@@ -423,7 +427,6 @@
           this.history = [];
           this.maxHistory = 3;
         }
-
         update(price) {
           this.ema = this.ema === null ? price : (price - this.ema) * this.multiplier + this.ema;
           this.history.push(this.ema);
@@ -432,16 +435,13 @@
           }
           return this.ema;
         }
-
         getCurrent() {
           return this.ema;
         }
-
         getHistory() {
           return [...this.history];
         }
       }
-
       class RSICalculator {
         constructor(period = 14) {
           this.period = period;
@@ -450,7 +450,6 @@
           this.prevPrice = null;
           this.rsi = null;
         }
-
         update(price) {
           if (this.prevPrice === null) {
             this.prevPrice = price;
@@ -474,12 +473,10 @@
           this.rsi = avgLoss === 0 ? 100 : 100 - (100 / (1 + (avgGain / avgLoss)));
           return this.rsi;
         }
-
         getCurrent() {
           return this.rsi;
         }
       }
-
       class MACDCalculator {
         constructor() {
           this.fastEMA = new EMA(12);
@@ -488,7 +485,6 @@
           this.history = [];
           this.maxHistory = 10;
         }
-
         update(price) {
           const fast = this.fastEMA.update(price);
           const slow = this.slowEMA.update(price);
@@ -512,21 +508,18 @@
             strength: this.calculateStrength(macdLine, signalLine)
           };
         }
-
         getDirection() {
           if (this.history.length < 2) return 'neutral';
           const current = this.history[this.history.length - 1].direction;
           const prev = this.history[this.history.length - 2].direction;
           return current === prev ? current : 'neutral';
         }
-
         calculateStrength(macdLine, signalLine) {
           const diff = Math.abs(macdLine - signalLine);
           const maxDiff = Math.max(0.5, diff * 2);
           return Math.min(diff / maxDiff, 1);
         }
       }
-
       class StochasticOscillator {
         constructor(period = 14, smoothing = 3) {
           this.period = period;
@@ -537,7 +530,6 @@
           this.kValues = [];
           this.dValues = [];
         }
-
         update(price, high, low) {
           this.closes.push(price);
           this.highs.push(high);
@@ -569,7 +561,6 @@
           return { k, d };
         }
       }
-
       class ADXCalculator {
         constructor(period = 14) {
           this.period = period;
@@ -584,7 +575,6 @@
           this.smoothedMinusDM = 0;
           this.adx = null;
         }
-
         update(high, low, close) {
           if (this.prevHigh === null) {
             this.prevHigh = high;
@@ -644,14 +634,12 @@
           };
         }
       }
-
       class BollingerBands {
         constructor(period = 20, multiplier = 2) {
           this.period = period;
           this.multiplier = multiplier;
           this.prices = [];
         }
-
         update(price) {
           this.prices.push(price);
           if (this.prices.length > this.period) {
@@ -673,26 +661,21 @@
           };
         }
       }
-
       class CandlePatternDetector {
         constructor() {
           this.prevCandle = null;
           this.currentCandle = null;
         }
-
         update(open, high, low, close) {
           this.prevCandle = this.currentCandle;
           this.currentCandle = { open, high, low, close };
-
           if (!this.prevCandle) return null;
           const currentBody = Math.abs(this.currentCandle.close - this.currentCandle.open);
           const currentUpperWick = this.currentCandle.high - Math.max(this.currentCandle.open, this.currentCandle.close);
           const currentLowerWick = Math.min(this.currentCandle.open, this.currentCandle.close) - this.currentCandle.low;
-
           const prevBody = Math.abs(this.prevCandle.close - this.prevCandle.open);
           const prevUpperWick = this.prevCandle.high - Math.max(this.prevCandle.open, this.prevCandle.close);
           const prevLowerWick = Math.min(this.prevCandle.open, this.prevCandle.close) - this.prevCandle.low;
-
           if (currentBody < currentUpperWick && currentBody < currentLowerWick) {
             if (currentUpperWick > 2 * currentBody && currentLowerWick < currentBody) {
               return 'PIN_BAR_BEARISH';
@@ -700,25 +683,21 @@
               return 'PIN_BAR_BULLISH';
             }
           }
-
           if (prevBody > 0) {
             const isBullishEngulfing =
               this.currentCandle.close > this.prevCandle.open &&
               this.currentCandle.open < this.prevCandle.close &&
               currentBody > prevBody;
-
             const isBearishEngulfing =
               this.currentCandle.close < this.prevCandle.open &&
               this.currentCandle.open > this.prevCandle.close &&
               currentBody > prevBody;
-
             if (isBullishEngulfing) return 'BULLISH_ENGULFING';
             if (isBearishEngulfing) return 'BEARISH_ENGULFING';
           }
           return null;
         }
       }
-
       function buildCards() {
         const container = document.getElementById('cards-container');
         volatilities.forEach(v => {
@@ -763,14 +742,24 @@
             <div id="signal-text-${v.symbol}" class="signal-area signal-waiting">ANALYZING</div>
             <div id="countdown-${v.symbol}" class="countdown"></div>
             <div id="signal-explanation-${v.symbol}" class="signal-explanation"></div>
+            <div class="digits-section">
+              <div class="digits-header">
+                <div class="digits-title">Recorded Digits</div>
+                <div class="digits-controls">
+                  <button id="toggle-digits-${v.symbol}" class="toggle-digits">HIDE</button>
+                  <button id="copy-digits-${v.symbol}" class="copy-digits">COPY</button>
+                </div>
+              </div>
+              <div id="digits-container-${v.symbol}" class="digits-container"></div>
+            </div>
           `;
           container.appendChild(card);
-
           dataStore[v.symbol] = {
             closes: [],
             highs: [],
             lows: [],
             opens: [],
+            digits: [],
             macdCalc: new MACDCalculator(),
             rsi5Calc: new RSICalculator(5),
             rsi14Calc: new RSICalculator(14),
@@ -800,24 +789,41 @@
               trendBar: card.querySelector(`#trend-bar-${v.symbol}`),
               candlePattern: card.querySelector(`#candle-pattern-${v.symbol}`),
               patternIndicator: card.querySelector(`#pattern-indicator-${v.symbol}`),
-              explanation: card.querySelector(`#signal-explanation-${v.symbol}`)
+              explanation: card.querySelector(`#signal-explanation-${v.symbol}`),
+              digitsContainer: card.querySelector(`#digits-container-${v.symbol}`),
+              toggleDigitsBtn: card.querySelector(`#toggle-digits-${v.symbol}`),
+              copyDigitsBtn: card.querySelector(`#copy-digits-${v.symbol}`)
             }
           };
+          
+          // Add event listeners for the new buttons
+          dataStore[v.symbol].ui.toggleDigitsBtn.addEventListener('click', () => {
+            const digitsContainer = dataStore[v.symbol].ui.digitsContainer;
+            const isHidden = digitsContainer.classList.contains('hidden');
+            if (isHidden) {
+              digitsContainer.classList.remove('hidden');
+              dataStore[v.symbol].ui.toggleDigitsBtn.textContent = 'HIDE';
+            } else {
+              digitsContainer.classList.add('hidden');
+              dataStore[v.symbol].ui.toggleDigitsBtn.textContent = 'SHOW';
+            }
+          });
+          
+          dataStore[v.symbol].ui.copyDigitsBtn.addEventListener('click', () => {
+            copyDigits(v.symbol);
+          });
         });
       }
-
       function connectWebSocket() {
         updateStatus('connecting', 'Connecting...');
         if (ws) ws.close();
         ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
-
         ws.onopen = () => {
           updateStatus('connected', 'Connected');
           volatilities.forEach(v => {
             ws.send(JSON.stringify({ ticks: v.symbol, subscribe: 1 }));
           });
         };
-
         ws.onmessage = e => {
           try {
             const data = JSON.parse(e.data);
@@ -826,24 +832,20 @@
             console.error('Error parsing message:', e);
           }
         };
-
         ws.onclose = () => {
           updateStatus('disconnected', 'Disconnected');
           setTimeout(connectWebSocket, 3000);
         };
-
         ws.onerror = (e) => {
           console.error('WebSocket error:', e);
           ws.close();
         };
       }
-
       function updateStatus(status, text) {
         const el = document.getElementById('connection-status');
         el.className = `connection-status ${status}`;
         el.textContent = text;
       }
-
       function checkConsolidation(data) {
         if (data.closes.length < CONSOLIDATION_PERIOD) return false;
         const recentCloses = data.closes.slice(-CONSOLIDATION_PERIOD);
@@ -869,7 +871,6 @@
         if (stoch.k < 40 || stoch.k > 60 || stoch.d < 40 || stoch.d > 60) return false;
         return true;
       }
-
       function checkEMACrossover(ema5, ema20) {
         if (ema5.history.length < 2 || ema20.history.length < 2) return 'neutral';
         const ema5Current = ema5.getCurrent();
@@ -887,7 +888,6 @@
         }
         return 'neutral';
       }
-
       function handleTick(tick) {
         const { symbol, quote } = tick;
         const d = dataStore[symbol];
@@ -907,6 +907,13 @@
           d.lows.shift();
           d.opens.shift();
         }
+        const priceStr = price.toFixed(3);
+        const secondDigit = priceStr.split('.')[1][1];
+        d.digits.push(secondDigit);
+        if (d.digits.length > 10000) {
+          d.digits.shift();
+        }
+        updateDigitsDisplay(symbol);
         d.ui.price.textContent = price.toFixed(3);
         const rsi5 = d.rsi5Calc.update(price);
         if (rsi5 !== null) {
@@ -1087,15 +1094,24 @@
           d.ui.explanation.textContent = 'Collecting market data for analysis...';
         }
       }
-
+      function updateDigitsDisplay(symbol) {
+        const d = dataStore[symbol];
+        // Show digits separated by commas
+        d.ui.digitsContainer.textContent = d.digits.join(', ');
+      }
+      function copyDigits(symbol) {
+        const d = dataStore[symbol];
+        const digitsText = d.digits.join(', ');
+        navigator.clipboard.writeText(digitsText).then(() => {
+          alert('Digits copied to clipboard');
+        });
+      }
       document.addEventListener('DOMContentLoaded', () => {
         buildCards();
         connectWebSocket();
-
         const loadingTextElement = document.getElementById('loading-text');
         const progressBarElement = document.getElementById('progress-bar');
         const progressTextElement = document.getElementById('progress-text');
-
         const loadingMessages = [
           "Loading market data...",
           "Fetching real-time prices...",
@@ -1104,7 +1120,6 @@
           "Preparing your dashboard...",
           "Almost ready..."
         ];
-
         let progress = 0;
         const interval = setInterval(() => {
           progress += Math.random() * 5;
@@ -1114,17 +1129,14 @@
           }
           progressBarElement.style.width = `${progress}%`;
           progressTextElement.textContent = `${Math.round(progress)}%`;
-
           const randomIndex = Math.floor(Math.random() * loadingMessages.length);
           loadingTextElement.textContent = loadingMessages[randomIndex];
         }, 500);
-
         setTimeout(() => {
           clearInterval(interval);
           document.getElementById('loading-screen').style.display = 'none';
           document.getElementById('app').style.display = 'grid';
         }, 30000);
-
         const volatilitySelect = document.getElementById('volatility-select');
         const startButton = document.getElementById('start-button');
         startButton.addEventListener('click', () => {
